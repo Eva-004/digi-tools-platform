@@ -4,7 +4,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100 w-10/12 mx-auto">
+        <div className="navbar bg-base-100 lg:w-10/12 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +31,7 @@ const NavBar = () => {
                         <li><a href="">FAQ</a></li>
                 </ul>
             </div>
-            <div className="navbar-end flex gap-4 items-center">
+            <div className="navbar-end flex gap-8 items-center">
                 <div className='indicator'>
                     <FiShoppingCart className='text-xl'/>
                     <span className="badge badge-sm indicator-item bg-red-500 text-white ">8</span>
