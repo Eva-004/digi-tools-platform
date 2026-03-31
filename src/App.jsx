@@ -4,6 +4,7 @@ import Banner from './Components/Banner'
 import NavBar from './Components/NavBar'
 import Products from './Components/Products/Products'
 import Stats from './Components/Stats'
+import GetStarted from './Components/GetStarted'
 
 const fetchProducts=async()=>{
   const res=await fetch('/data.json');
@@ -20,6 +21,7 @@ const productsPromise = fetchProducts();
    <Suspense fallback={<p>loading.....</p>}>
      <Products productsPromise={productsPromise }></Products>
    </Suspense>
+   <GetStarted></GetStarted>
     </>
   )
 }

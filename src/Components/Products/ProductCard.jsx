@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
                     ${product.tagType==='popular' ? 'badge-warning' : product.tagType==='new' ? 'badge-accent' : 'badge-success'}
                     font-bold absolute top-2 right-2`}>{product.tagType}</span>
                     <div className=' w-15 h-15 flex justify-center items-center bg-base-200 rounded-full'><img className='h-8  w-8'  src={product.icon} alt="" /></div>
-                    <h2 className="text-xl font-bold">{product.name}</h2>
+                    <h2 className="text-xl font-bold text-[#101727]">{product.name}</h2>
                     <p className='text-[#627382]'>{product.description}</p>
                     <h2 className='font-bold text-2xl'>${product.price}<span className='font-normal text-[16px] text-[#627382]'>/{product.period}</span></h2>
                 <ul className=" flex flex-col gap-2 text-xs">
