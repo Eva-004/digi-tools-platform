@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner'
 import NavBar from './Components/NavBar'
@@ -10,18 +10,22 @@ import Footer from './Components/Footer'
 
 const fetchProducts=async()=>{
   const res=await fetch('/data.json');
-  return res.json();
+  return await res.json();
 }
 
 function App() {
 const productsPromise = fetchProducts();
+ const [cartCount,setCartCount] = useState(0)
+ const handleTotalCart=(totalCart)=>{
+  setCartCount(totalCart)
+ }
   return (
     <>
-    <NavBar></NavBar>
+    <NavBar cartCount={cartCount}></NavBar>
     <Banner></Banner>
     <Stats></Stats>
    <Suspense fallback={<p>loading.....</p>}>
-     <Products productsPromise={productsPromise }></Products>
+     <Products productsPromise={productsPromise } handleTotalCart={handleTotalCart}></Products>
    </Suspense>
    <GetStarted></GetStarted>
    <Pricing></Pricing>

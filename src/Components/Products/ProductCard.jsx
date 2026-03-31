@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const ProductCard = ({ product }) => {
-    console.log(product)
+const ProductCard = ({ product,setCart,cart,handleTotalCart }) => {
+    const [isBuy,setIsBuy] = useState(false);
+    const handleBuyNow=()=>{
+     setIsBuy(true)
+     let newCart = [...cart,product]
+     setCart(newCart)
+     handleTotalCart(newCart.length)
+    }
     return (
         <div className="card  bg-base-100 shadow-sm">   
             <div className="card-body relative space-y-2">
@@ -15,11 +21,15 @@ const ProductCard = ({ product }) => {
                     <h2 className='font-bold text-2xl'>${product.price}<span className='font-normal text-[16px] text-[#627382]'>/{product.period}</span></h2>
                 <ul className=" flex flex-col gap-2 text-xs">
                     {
-                        product.features.map(feature => <li className='text-[#627382] font-medium flex gap-2 items-center'> <FaCheck className='text-[#30B868]'/>{feature}</li>)
+                        product.features.map((feature,ind) => <li key={ind} className='text-[#627382] font-medium flex gap-2 items-center'> <FaCheck className='text-[#30B868]'/>{feature}</li>)
                     }
                 </ul>
                 <div className="">
-                    <button className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl btn-block text-white font-bold ">Buy Now</button>
+                    <button onClick={handleBuyNow} disabled={isBuy} className={`btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl btn-block text-white font-bold `}>
+                        {
+                            isBuy ? 'Added to cart' : 'Buy Now'
+                        }
+                    </button>
                 </div>
             </div>
         </div>
