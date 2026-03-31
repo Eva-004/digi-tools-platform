@@ -1,10 +1,17 @@
 import React, { use, useState } from 'react';
 import ProductCard from './ProductCard';
+import SelectedProducts from '../SelectedProducts';
+import cartIcon from '../../assets/products/cart.jpg'
 
 const Products = ({productsPromise,handleTotalCart}) => {
    const productsData = use(productsPromise)
    const [cart,setCart] = useState([])
-    const [selected, setSelected] = useState('products');
+    const [selected, setSelected] = useState('products')
+    const handleRemove = (cartProduct) =>{
+          const filteredProducts = cart.filter(item => item.id !== cartProduct.id)
+          setCart(filteredProducts)
+
+    }
     return (
         <div className='w-10/12 mx-auto mb-30'>
             <div className='text-center space-y-4 mb-10'>
@@ -20,7 +27,18 @@ const Products = ({productsPromise,handleTotalCart}) => {
                 {
                     productsData.map(product => <ProductCard key={product.id} product={product} setCart={setCart} cart={cart} handleTotalCart={handleTotalCart}></ProductCard>)
                 }
-            </div> : ""
+            </div> : <div className='card card-body shadow-sm'>
+                <h2 className='text-[#101727] font-bold text-2xl mb-4'>Your Cart</h2>
+                {
+                    cart.length ===0 ? <div>
+                        <div className='flex justify-center items-center'>
+                            <img src={cartIcon} className='w-20' alt="" />
+                        </div>
+                        <p className='text-[#627382] text-center'>Your cart is empty</p>
+                    </div> 
+                    : cart.map(cartProduct => <SelectedProducts key={cartProduct.id} cartProduct={cartProduct} handleRemove={handleRemove}></SelectedProducts>)
+                }
+            </div>
             }
         </div>
     );
