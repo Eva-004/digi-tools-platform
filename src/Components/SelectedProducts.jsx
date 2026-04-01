@@ -2,8 +2,8 @@
 const SelectedProducts = ({cartProduct,handleRemove}) => {
    
     return (
-        <div className='flex justify-between p-5 bg-base-200 items-center'>
-            <div className='flex gap-4 justify-between items-center'>
+        <div className='flex flex-col sm:flex-row justify-between p-2 sm:p-5 bg-base-200 items-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>
                 <div>
                     <img src={cartProduct.icon} alt={cartProduct.name} className="w-8" />
                 </div>

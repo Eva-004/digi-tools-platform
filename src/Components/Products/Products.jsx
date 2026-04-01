@@ -15,8 +15,8 @@ const Products = ({productsPromise,setCart,cart}) => {
     return (
         <div className='w-10/12 mx-auto mb-30'>
             <div className='text-center space-y-4 mb-10'>
-                <h2 className='text-3xl font-bold text-[#101727] '>Premium Digital Tools</h2>
-                <p className='text-[#627382] text-[16px]'>Choose from our curated collection of premium digital products designed <br></br>to boost your productivity and creativity.</p>
+                <h2 className=' text-2xl sm:text-3xl font-bold text-[#101727] '>Premium Digital Tools</h2>
+                <p className='text-[#627382] text-[16px] md:px-75'>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
                 <div className='flex gap-2 justify-center '>
                         <button onClick={()=> setSelected('products')} className={`btn text-[16px] rounded-4xl ${selected == 'products' ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] shadow-md text-white font-bold' : 'font-medium border-0 '}`}>Products</button>
                     <button onClick={()=> setSelected('cart')} className={`btn text-[16px] rounded-4xl ${selected == 'cart' ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] shadow-md text-white font-bold' : 'font-medium border-0 '}`}>Cart ({cart.length})</button>

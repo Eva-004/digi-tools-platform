@@ -4,12 +4,12 @@ import packageIcon from '../assets/package.png'
 import rocketIcon from '../assets/rocket.png'
 const GetStarted = () => {
     return (
-        <div className=' bg-base-200 py-30'>
+        <div className=' bg-base-200 py-20 md:py-30'>
             <div className='text-center'>
-                <h2 className='font-extrabold text-4xl text-[#101727]'>Get Started in 3 Steps</h2>
+                <h2 className='font-extrabold text-2xl md:text-4xl text-[#101727]'>Get Started in 3 Steps</h2>
                 <p className='text-[#627382] mt-4'>Start using premium digital tools in minutes, not hours.</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 lg:w-10/12 mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 w-10/12 mx-auto'>
                 <div className="card bg-base-100 shadow-sm ">
                     <div className="card-body relative">
                         <div className='p-2 absolute top-3 right-3 font-bold text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-10 flex items-center justify-center'>01</div>

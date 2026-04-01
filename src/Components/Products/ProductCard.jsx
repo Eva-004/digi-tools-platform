@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const ProductCard = ({ product,setCart,cart,handleTotalCart }) => {
+const ProductCard = ({ product,setCart,cart}) => {
     const [isBuy,setIsBuy] = useState(false);
     const handleBuyNow=()=>{
      setIsBuy(true)
      let newCart = [...cart,product]
      setCart(newCart)
-     handleTotalCart(newCart.length)
     }
     return (
         <div className="card  bg-base-100 shadow-sm">   

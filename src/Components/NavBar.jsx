@@ -21,7 +21,7 @@ const NavBar = ({cart}) => {
                         <li><a href="">FAQ</a></li>
                     </ul>
                 </div>
-                <img src={logo} alt="logo" />
+                <img className=' w-20 md:w-45' src={logo} alt="logo" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-[16px]">
@@ -32,17 +32,17 @@ const NavBar = ({cart}) => {
                         <li><a href="">FAQ</a></li>
                 </ul>
             </div>
-            <div className="navbar-end flex gap-8 items-center">
+            <div className="navbar-end flex gap-4 md:gap-8 items-center">
                 <div className='indicator'>
-                    <FiShoppingCart className='text-xl'/>
+                    <FiShoppingCart className='text-md md:text-xl'/>
                     <span className={`badge badge-sm indicator-item bg-red-500 text-white ${cart.length===0 ? 'hidden' : 'flex'}`}>
                         {
                            cart.length
                         }
                         </span>
                 </div>
-                <button className='text-lg font-semibold'>Login</button>
-                <button className='btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] p-3 rounded-4xl text-[16px] font-semibold text-white'>Get Started</button>
+                <button className=' text-sm md:text-lg font-semibold'>Login</button>
+                <button className='btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] p-2 md:p-3 rounded-4xl text-sm md:text-[16px] font-semibold text-white'>Get Started</button>
             </div>
         </div>
     );

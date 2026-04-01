@@ -7,7 +7,7 @@ const Footer = () => {
     return (
        <div className='bg-[#101727] pt-30 pb-10'>
          <div className='w-10/12 mx-auto'>
-            <div className='flex flex-col justify-center md:flex-row gap-20 md:justify-evenly text-white'>
+            <div className='flex flex-col justify-center md:flex-row gap-10 md:gap-20 md:justify-evenly text-white'>
                 <div>
                     <img src={footerLogo} alt="footer logo" />
                     <p className='text-white mt-4'>Premium digital tools for creators, professionals, and businesses. Work smarter with our suite of powerful tools.</p>

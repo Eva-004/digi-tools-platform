@@ -2,9 +2,9 @@ import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 const Pricing = () => {
     return (
-        <div className='lg:w-10/12 mx-auto my-30'>
+        <div className='w-10/12 mx-auto my-30'>
             <div className='mb-10 text-center space-y-4'>
-                <h2 className='font-extrabold text-5xl text-[#101727]'>Simple, Transparent Pricing</h2>
+                <h2 className='font-extrabold text-xl sm:text-2xl md:text-5xl text-[#101727]'>Simple, Transparent Pricing</h2>
                 <p className='text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -27,7 +27,7 @@ const Pricing = () => {
                 </div>
                <div className="card-body  relative space-y-2 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-2xl">
                                  
-                                 <span className='badge badge-warning absolute -top-2 right-26'>Most Popular</span>
+                                 <span className='badge badge-warning absolute -top-2 right-20 md:right-26'>Most Popular</span>
 
                                  <div className='space-y-1'>
                                     <h2 className="text-xl font-bold text-white">Starter</h2>
