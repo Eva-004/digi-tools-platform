@@ -13,7 +13,7 @@ const Products = ({productsPromise,setCart,cart}) => {
           const filteredProducts = cart.filter(item => item.id !== cartProduct.id)
           setCart(filteredProducts)
          setTotalAmount(totalAmount - cartProduct.price)
-         toast('Remove cart successfully')
+         toast('Remove from cart successfully')
     }
     const handleProceed =()=>{
         setCart([])
@@ -43,7 +43,7 @@ const Products = ({productsPromise,setCart,cart}) => {
                         </div>
                         <p className='text-[#627382] text-center'>Your cart is empty</p>
                     </div> 
-                    : <div>
+                    : <div className='space-y-4'>
                         {
                             cart.map(cartProduct => <SelectedProducts key={cartProduct.id} cartProduct={cartProduct} handleRemove={handleRemove} ></SelectedProducts>)
                         }
