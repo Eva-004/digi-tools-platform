@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/logo.png';
 import { FiShoppingCart } from 'react-icons/fi';
 
-const NavBar = ({cartCount}) => {
+const NavBar = ({cart}) => {
  
     return (
         <div className="navbar bg-base-100 lg:w-10/12 mx-auto">
@@ -35,9 +35,9 @@ const NavBar = ({cartCount}) => {
             <div className="navbar-end flex gap-8 items-center">
                 <div className='indicator'>
                     <FiShoppingCart className='text-xl'/>
-                    <span className={`badge badge-sm indicator-item bg-red-500 text-white ${cartCount ===0 ? 'hidden' : 'flex'}`}>
+                    <span className={`badge badge-sm indicator-item bg-red-500 text-white ${cart.length===0 ? 'hidden' : 'flex'}`}>
                         {
-                           cartCount
+                           cart.length
                         }
                         </span>
                 </div>

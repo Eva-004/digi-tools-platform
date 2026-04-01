@@ -12,21 +12,19 @@ const fetchProducts=async()=>{
   const res=await fetch('/data.json');
   return await res.json();
 }
-
-function App() {
 const productsPromise = fetchProducts();
- const [cartCount,setCartCount] = useState(0)
- const handleTotalCart=(totalCart)=>{
-  setCartCount(totalCart)
- }
+function App() {
+
+ const [cart,setCart] = useState([])
+ 
   return (
     <>
-    <NavBar cartCount={cartCount}></NavBar>
+    <NavBar  cart={cart}></NavBar>
     <Banner></Banner>
     <Stats></Stats>
-   <Suspense fallback={<p>loading.....</p>}>
-     <Products productsPromise={productsPromise } handleTotalCart={handleTotalCart}></Products>
-   </Suspense>
+   
+     <Products productsPromise={productsPromise } setCart={setCart} cart={cart}></Products>
+ 
    <GetStarted></GetStarted>
    <Pricing></Pricing>
    <Footer></Footer>

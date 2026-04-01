@@ -5,7 +5,7 @@ const SelectedProducts = ({cartProduct,handleRemove}) => {
         <div className='flex justify-between p-5 bg-base-200 items-center'>
             <div className='flex gap-4 justify-between items-center'>
                 <div>
-                    <img src={cartProduct.icon} alt={cartProduct.name} />
+                    <img src={cartProduct.icon} alt={cartProduct.name} className="w-8" />
                 </div>
                 <div className='space-y-2'>
                     <h2 className='text-lg font-semibold'>{cartProduct.name}</h2>
@@ -13,7 +13,7 @@ const SelectedProducts = ({cartProduct,handleRemove}) => {
                 </div>
             </div>
             <button onClick={()=>handleRemove(cartProduct)} className='font-bold
-             text-[#FF3980] cursor-pointer'>
+             text-[#FF3980] cursor-pointer hover:bg-red-200'>
                 Remove
             </button>
         </div>

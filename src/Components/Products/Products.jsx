@@ -3,9 +3,9 @@ import ProductCard from './ProductCard';
 import SelectedProducts from '../SelectedProducts';
 import cartIcon from '../../assets/products/cart.jpg'
 
-const Products = ({productsPromise,handleTotalCart}) => {
+const Products = ({productsPromise,setCart,cart}) => {
    const productsData = use(productsPromise)
-   const [cart,setCart] = useState([])
+  
     const [selected, setSelected] = useState('products')
     const handleRemove = (cartProduct) =>{
           const filteredProducts = cart.filter(item => item.id !== cartProduct.id)
@@ -25,7 +25,7 @@ const Products = ({productsPromise,handleTotalCart}) => {
             {
                 selected =='products' ? <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
                 {
-                    productsData.map(product => <ProductCard key={product.id} product={product} setCart={setCart} cart={cart} handleTotalCart={handleTotalCart}></ProductCard>)
+                    productsData.map(product => <ProductCard key={product.id} product={product} setCart={setCart} cart={cart} ></ProductCard>)
                 }
             </div> : <div className='card card-body shadow-sm'>
                 <h2 className='text-[#101727] font-bold text-2xl mb-4'>Your Cart</h2>
