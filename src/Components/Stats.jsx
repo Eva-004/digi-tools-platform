@@ -7,12 +7,12 @@ const Stats = () => {
                 <h1 className=' text-2xl md:text-4xl font-extrabold text-white '>50K+</h1>
                 <p className='text-sm md:text-lg font-medium text-white'>Active Users</p>
             </div>
-            <div className='border-t md:border-l border-white'></div>
+            <div className='border-l border-white'></div>
             <div>
                 <h1 className='text-2xl md:text-4xl font-extrabold text-white '>200K+</h1>
                 <p className='text-sm md:text-lg font-medium text-white'>Premium Tools</p>
             </div>
-             <div className='border-t md:border-l border-white'></div>
+             <div className='border-l border-white'></div>
             <div>
                 <h1 className='text-2xl md:text-4xl font-extrabold text-white '>4.9</h1>
                 <p className=' text-sm md:text-lg font-medium text-white'>Rating</p>

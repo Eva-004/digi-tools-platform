@@ -24,9 +24,11 @@ const Products = ({productsPromise,setCart,cart}) => {
             <div className='text-center space-y-4 mb-10'>
                 <h2 className=' text-2xl sm:text-3xl font-bold text-[#101727] '>Premium Digital Tools</h2>
                 <p className='text-[#627382] text-[16px] md:px-75'>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
-                <div className='flex gap-2 justify-center '>
-                        <button onClick={()=> setSelected('products')} className={`btn text-[16px] rounded-4xl ${selected == 'products' ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] shadow-md text-white font-bold' : 'font-medium border-0 '}`}>Products</button>
+                <div >
+                      <div className='flex gap-2 justify-center p-2 bg-base-200 w-50 mx-auto rounded-4xl'>
+                          <button onClick={()=> setSelected('products')} className={`btn text-[16px] rounded-4xl ${selected == 'products' ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] shadow-md text-white font-bold' : 'font-medium border-0 '}`}>Products</button>
                     <button onClick={()=> setSelected('cart')} className={`btn text-[16px] rounded-4xl ${selected == 'cart' ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] shadow-md text-white font-bold' : 'font-medium border-0 '}`}>Cart ({cart.length})</button>
+                      </div>
                 </div>
             </div>
             {
