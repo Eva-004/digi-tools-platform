@@ -1,16 +1,23 @@
-# React + Vite
+# Digitools 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Digitools is an all-in-one digital productivity platform designed to supercharge your workflow. Access premium AI tools, design assets, templates, and software—all in one place to create, automate, and optimize faster than ever.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ⚙️ Technologies Used 
 
-## React Compiler
+- React.js
+- Tailwind CSS
+- DaisyUI
+- JavaScript (ES6+)
+- React-Toastify (NPM Package)
+- JSON (for product data)
+- React Icons
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Premium Digital Tools : Resume Builder, Social Media Content Kit, Business Plan Generator, and more
+- Get Started in 3 Steps : Start using premium digital tools in minutes, not hours. 
+                            • Create Account 
+                            • Choose Products 
+                            • Start Creating
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
