@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
-
+import { toast } from 'react-toastify';
+  
 const ProductCard = ({ product,setCart,cart,totalAmount,setTotalAmount}) => {
     const [isBuy,setIsBuy] = useState(false);
     const handleBuyNow=()=>{
      setIsBuy(true)
      let newCart = [...cart,product]
      setCart(newCart)
+     toast.success('Added to cart successfully')
      setTotalAmount(totalAmount + product.price)
     }
     return (

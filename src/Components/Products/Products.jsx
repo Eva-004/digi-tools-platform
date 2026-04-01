@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import ProductCard from './ProductCard';
 import SelectedProducts from '../SelectedProducts';
 import cartIcon from '../../assets/products/cart.jpg'
+import { toast } from 'react-toastify';
 
 const Products = ({productsPromise,setCart,cart}) => {
    const productsData = use(productsPromise)
@@ -12,9 +13,11 @@ const Products = ({productsPromise,setCart,cart}) => {
           const filteredProducts = cart.filter(item => item.id !== cartProduct.id)
           setCart(filteredProducts)
          setTotalAmount(totalAmount - cartProduct.price)
+         toast('Remove cart successfully')
     }
     const handleProceed =()=>{
         setCart([])
+        toast.success('Proceed to checkout successfully')
     }
     return (
         <div className='w-10/12 mx-auto mb-30'>
