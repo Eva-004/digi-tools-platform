@@ -38,23 +38,24 @@ Live Demo: https://digi-tools-platform-eva.netlify.app/
 
 ---
 ### ⚙️ Installation & Setup
-
+---
 1️⃣ Clone the Repository
-
-git clone https://github.com/your-username/digitools.git
-
+---
+git clone https://github.com/Eva-004/digi-tools-platform
+---
 2️⃣ Navigate to Project Folder
-
+---
 cd digi-tools-platform
-
+---
 3️⃣ Install Dependencies
-
+---
 npm install
-
+---
 4️⃣ Start Development Server
-
+---
 npm run dev
-
+---
 5️⃣ Open in Browser
-
+---
 http://localhost:5173
+---
