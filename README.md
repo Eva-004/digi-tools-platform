@@ -2,6 +2,9 @@
 
 Digitools is an all-in-one digital productivity platform designed to supercharge your workflow. Access premium AI tools, design assets, templates, and software—all in one place to create, automate, and optimize faster than ever.
 
+Live Demo: https://digi-tools-platform-eva.netlify.app/
+
+---
 
 ## ⚙️ Technologies Used 
 
@@ -12,6 +15,8 @@ Digitools is an all-in-one digital productivity platform designed to supercharge
 - React-Toastify (NPM Package)
 - JSON (for product data)
 - React Icons
+
+--- 
 
 ## Features
 
@@ -24,3 +29,32 @@ Digitools is an all-in-one digital productivity platform designed to supercharge
                                  • Starter – Perfect for getting started
                                  • Pro – Most Popular
                                  • Enterprise – For teams and businesses
+
+  ---
+
+## 📦 Dependencies
+
+### npm install react react-dom react-icons react-toastify tailwindcss @tailwindcss/vite
+
+---
+### ⚙️ Installation & Setup
+
+1️⃣ Clone the Repository
+
+git clone https://github.com/your-username/digitools.git
+
+2️⃣ Navigate to Project Folder
+
+cd digi-tools-platform
+
+3️⃣ Install Dependencies
+
+npm install
+
+4️⃣ Start Development Server
+
+npm run dev
+
+5️⃣ Open in Browser
+
+http://localhost:5173
