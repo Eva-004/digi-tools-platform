@@ -38,7 +38,7 @@ Live Demo: https://digi-tools-platform-eva.netlify.app/
 
 ---
 ### ⚙️ Installation & Setup
----
+
 1️⃣ Clone the Repository
 ---
 git clone https://github.com/Eva-004/digi-tools-platform
